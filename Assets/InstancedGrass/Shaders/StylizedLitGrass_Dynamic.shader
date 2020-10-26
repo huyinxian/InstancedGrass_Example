@@ -1,4 +1,4 @@
-﻿Shader "LitGrass"
+﻿Shader "StylizedLitGrass_Dynamic"
 {
     Properties
     {
@@ -21,7 +21,7 @@
             "RenderPipeline" = "UniversalRenderPipeline"
         }
 
-        LOD 100
+        Cull Off
 
         Pass
         {
@@ -37,22 +37,22 @@
 
             struct appdata
             {
-                float4 vertex: POSITION;
-                float3 normal: NORMAL;
-                half4 color: COLOR;
-                float2 uv0: TEXCOORD0;
-                float2 uv1: TEXCOORD1;
+                float4 vertex : POSITION;
+                float3 normal : NORMAL;
+                half4 color : COLOR;
+                float2 uv0 : TEXCOORD0;
+                float2 uv1 : TEXCOORD1;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct v2f
             {
                 float4 positionCS : SV_POSITION;
-                half4 color: TEXCOORD0;
-                half4 diffColor: TEXCOORD1;
-                half4 specColor: TEXCOORD2;
-                half3 fresnelColor: TEXCOORD3;
-                float3 positionWS: TEXCOORD4;
+                half4 color : TEXCOORD0;
+                half4 diffColor : TEXCOORD1;
+                half4 specColor : TEXCOORD2;
+                half3 fresnelColor : TEXCOORD3;
+                float3 positionWS : TEXCOORD4;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 

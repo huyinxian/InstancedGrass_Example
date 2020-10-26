@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
+[RequireComponent(typeof(Camera))]
 public class InteractiveRTCamera : MonoBehaviour
 {
     public Transform FollowTarget;
